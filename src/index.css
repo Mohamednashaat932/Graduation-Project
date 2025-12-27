@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "Montserrat", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  color: #0a0e29;
+}
+h1 {
+  font-size: 39px;
+  font-weight: bold;
+}
+h2 {
+  font-size: 31px;
+  font-weight: bold;
+}
+h3 {
+  font-size: 25px;
+  font-weight: bold;
+}
+.embla {
+  max-width: 100%;
+  margin: auto;
+  --slide-height: 19rem;
+  --slide-spacing: 1rem;
+  --slide-size: 90%;
+}
+@media (min-width: 768px) {
+  .embla {
+    --slide-size: 70%;
+  }
+}
+.embla__viewport {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+.embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+}
